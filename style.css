@@ -10,8 +10,13 @@
     padding: 15px;
 
 }
-
-
+.loader{
+    text-align: center;
+}
+#load, .res{
+    display: none;
+    
+}
 .options{
     border-radius: 100px;
     padding: 15px;
@@ -20,6 +25,9 @@
     transition: 0.3s
 }
 
+#load{
+    height: 200px;
+}
 .options:hover{
     transform: scale(1.05);
 }

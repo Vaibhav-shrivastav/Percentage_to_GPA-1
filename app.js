@@ -1,5 +1,13 @@
-document.getElementById('submit').addEventListener('click', calculateResults);
-document.getElementById('res').style.display = "none";
+document.getElementById('submit').addEventListener('click', function(e){
+    document.querySelector('.res').style.display = 'none';
+
+    document.getElementById('load').style.display = 'unset';
+
+    setTimeout(calculateResults, 3000);
+
+    e.preventDefault();
+});
+
 
 function calculateResults(e){
     
@@ -8,6 +16,11 @@ function calculateResults(e){
 
     let result = (Percentage/100)*GPA ;
     let res = result.toFixed(2);
+
+    document.getElementById('load').style.display = 'none';
+
+    document.querySelector('.res').style.display = 'unset';
+
     document.getElementById('res').style.display = "unset";
 
     document.getElementById('res').innerHTML = res ;
